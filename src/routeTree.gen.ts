@@ -10,7 +10,15 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WaterHeaterInstallationRepairRouteImport } from './routes/water-heater-installation-repair'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PlumberWestlandsRouteImport } from './routes/plumber-westlands'
+import { Route as PlumberUpperHillRouteImport } from './routes/plumber-upper-hill'
+import { Route as PlumberNairobiCbdRouteImport } from './routes/plumber-nairobi-cbd'
 import { Route as PlumberNairobiRouteImport } from './routes/plumber-nairobi'
+import { Route as PlumberLavingtonRouteImport } from './routes/plumber-lavington'
+import { Route as PlumberKilimaniRouteImport } from './routes/plumber-kilimani'
+import { Route as PlumberKileleshwaRouteImport } from './routes/plumber-kileleshwa'
+import { Route as PlumberKarenRouteImport } from './routes/plumber-karen'
 import { Route as PipeInstallationNairobiRouteImport } from './routes/pipe-installation-nairobi'
 import { Route as LeakRepairNairobiRouteImport } from './routes/leak-repair-nairobi'
 import { Route as GetAQuoteRouteImport } from './routes/get-a-quote'
@@ -28,9 +36,49 @@ const WaterHeaterInstallationRepairRoute =
     path: '/water-heater-installation-repair',
     getParentRoute: () => rootRouteImport,
   } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlumberWestlandsRoute = PlumberWestlandsRouteImport.update({
+  id: '/plumber-westlands',
+  path: '/plumber-westlands',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlumberUpperHillRoute = PlumberUpperHillRouteImport.update({
+  id: '/plumber-upper-hill',
+  path: '/plumber-upper-hill',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlumberNairobiCbdRoute = PlumberNairobiCbdRouteImport.update({
+  id: '/plumber-nairobi-cbd',
+  path: '/plumber-nairobi-cbd',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlumberNairobiRoute = PlumberNairobiRouteImport.update({
   id: '/plumber-nairobi',
   path: '/plumber-nairobi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlumberLavingtonRoute = PlumberLavingtonRouteImport.update({
+  id: '/plumber-lavington',
+  path: '/plumber-lavington',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlumberKilimaniRoute = PlumberKilimaniRouteImport.update({
+  id: '/plumber-kilimani',
+  path: '/plumber-kilimani',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlumberKileleshwaRoute = PlumberKileleshwaRouteImport.update({
+  id: '/plumber-kileleshwa',
+  path: '/plumber-kileleshwa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlumberKarenRoute = PlumberKarenRouteImport.update({
+  id: '/plumber-karen',
+  path: '/plumber-karen',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PipeInstallationNairobiRoute = PipeInstallationNairobiRouteImport.update({
@@ -97,7 +145,15 @@ export interface FileRoutesByFullPath {
   '/get-a-quote': typeof GetAQuoteRoute
   '/leak-repair-nairobi': typeof LeakRepairNairobiRoute
   '/pipe-installation-nairobi': typeof PipeInstallationNairobiRoute
+  '/plumber-karen': typeof PlumberKarenRoute
+  '/plumber-kileleshwa': typeof PlumberKileleshwaRoute
+  '/plumber-kilimani': typeof PlumberKilimaniRoute
+  '/plumber-lavington': typeof PlumberLavingtonRoute
   '/plumber-nairobi': typeof PlumberNairobiRoute
+  '/plumber-nairobi-cbd': typeof PlumberNairobiCbdRoute
+  '/plumber-upper-hill': typeof PlumberUpperHillRoute
+  '/plumber-westlands': typeof PlumberWestlandsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/water-heater-installation-repair': typeof WaterHeaterInstallationRepairRoute
 }
 export interface FileRoutesByTo {
@@ -111,7 +167,15 @@ export interface FileRoutesByTo {
   '/get-a-quote': typeof GetAQuoteRoute
   '/leak-repair-nairobi': typeof LeakRepairNairobiRoute
   '/pipe-installation-nairobi': typeof PipeInstallationNairobiRoute
+  '/plumber-karen': typeof PlumberKarenRoute
+  '/plumber-kileleshwa': typeof PlumberKileleshwaRoute
+  '/plumber-kilimani': typeof PlumberKilimaniRoute
+  '/plumber-lavington': typeof PlumberLavingtonRoute
   '/plumber-nairobi': typeof PlumberNairobiRoute
+  '/plumber-nairobi-cbd': typeof PlumberNairobiCbdRoute
+  '/plumber-upper-hill': typeof PlumberUpperHillRoute
+  '/plumber-westlands': typeof PlumberWestlandsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/water-heater-installation-repair': typeof WaterHeaterInstallationRepairRoute
 }
 export interface FileRoutesById {
@@ -126,7 +190,15 @@ export interface FileRoutesById {
   '/get-a-quote': typeof GetAQuoteRoute
   '/leak-repair-nairobi': typeof LeakRepairNairobiRoute
   '/pipe-installation-nairobi': typeof PipeInstallationNairobiRoute
+  '/plumber-karen': typeof PlumberKarenRoute
+  '/plumber-kileleshwa': typeof PlumberKileleshwaRoute
+  '/plumber-kilimani': typeof PlumberKilimaniRoute
+  '/plumber-lavington': typeof PlumberLavingtonRoute
   '/plumber-nairobi': typeof PlumberNairobiRoute
+  '/plumber-nairobi-cbd': typeof PlumberNairobiCbdRoute
+  '/plumber-upper-hill': typeof PlumberUpperHillRoute
+  '/plumber-westlands': typeof PlumberWestlandsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/water-heater-installation-repair': typeof WaterHeaterInstallationRepairRoute
 }
 export interface FileRouteTypes {
@@ -142,7 +214,15 @@ export interface FileRouteTypes {
     | '/get-a-quote'
     | '/leak-repair-nairobi'
     | '/pipe-installation-nairobi'
+    | '/plumber-karen'
+    | '/plumber-kileleshwa'
+    | '/plumber-kilimani'
+    | '/plumber-lavington'
     | '/plumber-nairobi'
+    | '/plumber-nairobi-cbd'
+    | '/plumber-upper-hill'
+    | '/plumber-westlands'
+    | '/sitemap.xml'
     | '/water-heater-installation-repair'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -156,7 +236,15 @@ export interface FileRouteTypes {
     | '/get-a-quote'
     | '/leak-repair-nairobi'
     | '/pipe-installation-nairobi'
+    | '/plumber-karen'
+    | '/plumber-kileleshwa'
+    | '/plumber-kilimani'
+    | '/plumber-lavington'
     | '/plumber-nairobi'
+    | '/plumber-nairobi-cbd'
+    | '/plumber-upper-hill'
+    | '/plumber-westlands'
+    | '/sitemap.xml'
     | '/water-heater-installation-repair'
   id:
     | '__root__'
@@ -170,7 +258,15 @@ export interface FileRouteTypes {
     | '/get-a-quote'
     | '/leak-repair-nairobi'
     | '/pipe-installation-nairobi'
+    | '/plumber-karen'
+    | '/plumber-kileleshwa'
+    | '/plumber-kilimani'
+    | '/plumber-lavington'
     | '/plumber-nairobi'
+    | '/plumber-nairobi-cbd'
+    | '/plumber-upper-hill'
+    | '/plumber-westlands'
+    | '/sitemap.xml'
     | '/water-heater-installation-repair'
   fileRoutesById: FileRoutesById
 }
@@ -185,7 +281,15 @@ export interface RootRouteChildren {
   GetAQuoteRoute: typeof GetAQuoteRoute
   LeakRepairNairobiRoute: typeof LeakRepairNairobiRoute
   PipeInstallationNairobiRoute: typeof PipeInstallationNairobiRoute
+  PlumberKarenRoute: typeof PlumberKarenRoute
+  PlumberKileleshwaRoute: typeof PlumberKileleshwaRoute
+  PlumberKilimaniRoute: typeof PlumberKilimaniRoute
+  PlumberLavingtonRoute: typeof PlumberLavingtonRoute
   PlumberNairobiRoute: typeof PlumberNairobiRoute
+  PlumberNairobiCbdRoute: typeof PlumberNairobiCbdRoute
+  PlumberUpperHillRoute: typeof PlumberUpperHillRoute
+  PlumberWestlandsRoute: typeof PlumberWestlandsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WaterHeaterInstallationRepairRoute: typeof WaterHeaterInstallationRepairRoute
 }
 
@@ -198,11 +302,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WaterHeaterInstallationRepairRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plumber-westlands': {
+      id: '/plumber-westlands'
+      path: '/plumber-westlands'
+      fullPath: '/plumber-westlands'
+      preLoaderRoute: typeof PlumberWestlandsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plumber-upper-hill': {
+      id: '/plumber-upper-hill'
+      path: '/plumber-upper-hill'
+      fullPath: '/plumber-upper-hill'
+      preLoaderRoute: typeof PlumberUpperHillRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plumber-nairobi-cbd': {
+      id: '/plumber-nairobi-cbd'
+      path: '/plumber-nairobi-cbd'
+      fullPath: '/plumber-nairobi-cbd'
+      preLoaderRoute: typeof PlumberNairobiCbdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/plumber-nairobi': {
       id: '/plumber-nairobi'
       path: '/plumber-nairobi'
       fullPath: '/plumber-nairobi'
       preLoaderRoute: typeof PlumberNairobiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plumber-lavington': {
+      id: '/plumber-lavington'
+      path: '/plumber-lavington'
+      fullPath: '/plumber-lavington'
+      preLoaderRoute: typeof PlumberLavingtonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plumber-kilimani': {
+      id: '/plumber-kilimani'
+      path: '/plumber-kilimani'
+      fullPath: '/plumber-kilimani'
+      preLoaderRoute: typeof PlumberKilimaniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plumber-kileleshwa': {
+      id: '/plumber-kileleshwa'
+      path: '/plumber-kileleshwa'
+      fullPath: '/plumber-kileleshwa'
+      preLoaderRoute: typeof PlumberKileleshwaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plumber-karen': {
+      id: '/plumber-karen'
+      path: '/plumber-karen'
+      fullPath: '/plumber-karen'
+      preLoaderRoute: typeof PlumberKarenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pipe-installation-nairobi': {
@@ -289,9 +449,27 @@ const rootRouteChildren: RootRouteChildren = {
   GetAQuoteRoute: GetAQuoteRoute,
   LeakRepairNairobiRoute: LeakRepairNairobiRoute,
   PipeInstallationNairobiRoute: PipeInstallationNairobiRoute,
+  PlumberKarenRoute: PlumberKarenRoute,
+  PlumberKileleshwaRoute: PlumberKileleshwaRoute,
+  PlumberKilimaniRoute: PlumberKilimaniRoute,
+  PlumberLavingtonRoute: PlumberLavingtonRoute,
   PlumberNairobiRoute: PlumberNairobiRoute,
+  PlumberNairobiCbdRoute: PlumberNairobiCbdRoute,
+  PlumberUpperHillRoute: PlumberUpperHillRoute,
+  PlumberWestlandsRoute: PlumberWestlandsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   WaterHeaterInstallationRepairRoute: WaterHeaterInstallationRepairRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
