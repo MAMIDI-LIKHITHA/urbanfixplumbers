@@ -9,16 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WaterHeaterInstallationRepairRouteImport } from './routes/water-heater-installation-repair'
 import { Route as PlumberNairobiRouteImport } from './routes/plumber-nairobi'
+import { Route as PipeInstallationNairobiRouteImport } from './routes/pipe-installation-nairobi'
+import { Route as LeakRepairNairobiRouteImport } from './routes/leak-repair-nairobi'
 import { Route as GetAQuoteRouteImport } from './routes/get-a-quote'
 import { Route as EmergencyPlumbingNairobiRouteImport } from './routes/emergency-plumbing-nairobi'
+import { Route as DrainageServicesNairobiRouteImport } from './routes/drainage-services-nairobi'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CommercialPlumbingNairobiRouteImport } from './routes/commercial-plumbing-nairobi'
+import { Route as BathroomKitchenPlumbingRouteImport } from './routes/bathroom-kitchen-plumbing'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WaterHeaterInstallationRepairRoute =
+  WaterHeaterInstallationRepairRouteImport.update({
+    id: '/water-heater-installation-repair',
+    path: '/water-heater-installation-repair',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PlumberNairobiRoute = PlumberNairobiRouteImport.update({
   id: '/plumber-nairobi',
   path: '/plumber-nairobi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PipeInstallationNairobiRoute = PipeInstallationNairobiRouteImport.update({
+  id: '/pipe-installation-nairobi',
+  path: '/pipe-installation-nairobi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeakRepairNairobiRoute = LeakRepairNairobiRouteImport.update({
+  id: '/leak-repair-nairobi',
+  path: '/leak-repair-nairobi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GetAQuoteRoute = GetAQuoteRouteImport.update({
@@ -32,9 +54,25 @@ const EmergencyPlumbingNairobiRoute =
     path: '/emergency-plumbing-nairobi',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DrainageServicesNairobiRoute = DrainageServicesNairobiRouteImport.update({
+  id: '/drainage-services-nairobi',
+  path: '/drainage-services-nairobi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommercialPlumbingNairobiRoute =
+  CommercialPlumbingNairobiRouteImport.update({
+    id: '/commercial-plumbing-nairobi',
+    path: '/commercial-plumbing-nairobi',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BathroomKitchenPlumbingRoute = BathroomKitchenPlumbingRouteImport.update({
+  id: '/bathroom-kitchen-plumbing',
+  path: '/bathroom-kitchen-plumbing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -51,71 +89,134 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bathroom-kitchen-plumbing': typeof BathroomKitchenPlumbingRoute
+  '/commercial-plumbing-nairobi': typeof CommercialPlumbingNairobiRoute
   '/contact': typeof ContactRoute
+  '/drainage-services-nairobi': typeof DrainageServicesNairobiRoute
   '/emergency-plumbing-nairobi': typeof EmergencyPlumbingNairobiRoute
   '/get-a-quote': typeof GetAQuoteRoute
+  '/leak-repair-nairobi': typeof LeakRepairNairobiRoute
+  '/pipe-installation-nairobi': typeof PipeInstallationNairobiRoute
   '/plumber-nairobi': typeof PlumberNairobiRoute
+  '/water-heater-installation-repair': typeof WaterHeaterInstallationRepairRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bathroom-kitchen-plumbing': typeof BathroomKitchenPlumbingRoute
+  '/commercial-plumbing-nairobi': typeof CommercialPlumbingNairobiRoute
   '/contact': typeof ContactRoute
+  '/drainage-services-nairobi': typeof DrainageServicesNairobiRoute
   '/emergency-plumbing-nairobi': typeof EmergencyPlumbingNairobiRoute
   '/get-a-quote': typeof GetAQuoteRoute
+  '/leak-repair-nairobi': typeof LeakRepairNairobiRoute
+  '/pipe-installation-nairobi': typeof PipeInstallationNairobiRoute
   '/plumber-nairobi': typeof PlumberNairobiRoute
+  '/water-heater-installation-repair': typeof WaterHeaterInstallationRepairRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/bathroom-kitchen-plumbing': typeof BathroomKitchenPlumbingRoute
+  '/commercial-plumbing-nairobi': typeof CommercialPlumbingNairobiRoute
   '/contact': typeof ContactRoute
+  '/drainage-services-nairobi': typeof DrainageServicesNairobiRoute
   '/emergency-plumbing-nairobi': typeof EmergencyPlumbingNairobiRoute
   '/get-a-quote': typeof GetAQuoteRoute
+  '/leak-repair-nairobi': typeof LeakRepairNairobiRoute
+  '/pipe-installation-nairobi': typeof PipeInstallationNairobiRoute
   '/plumber-nairobi': typeof PlumberNairobiRoute
+  '/water-heater-installation-repair': typeof WaterHeaterInstallationRepairRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/bathroom-kitchen-plumbing'
+    | '/commercial-plumbing-nairobi'
     | '/contact'
+    | '/drainage-services-nairobi'
     | '/emergency-plumbing-nairobi'
     | '/get-a-quote'
+    | '/leak-repair-nairobi'
+    | '/pipe-installation-nairobi'
     | '/plumber-nairobi'
+    | '/water-heater-installation-repair'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/bathroom-kitchen-plumbing'
+    | '/commercial-plumbing-nairobi'
     | '/contact'
+    | '/drainage-services-nairobi'
     | '/emergency-plumbing-nairobi'
     | '/get-a-quote'
+    | '/leak-repair-nairobi'
+    | '/pipe-installation-nairobi'
     | '/plumber-nairobi'
+    | '/water-heater-installation-repair'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/bathroom-kitchen-plumbing'
+    | '/commercial-plumbing-nairobi'
     | '/contact'
+    | '/drainage-services-nairobi'
     | '/emergency-plumbing-nairobi'
     | '/get-a-quote'
+    | '/leak-repair-nairobi'
+    | '/pipe-installation-nairobi'
     | '/plumber-nairobi'
+    | '/water-heater-installation-repair'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BathroomKitchenPlumbingRoute: typeof BathroomKitchenPlumbingRoute
+  CommercialPlumbingNairobiRoute: typeof CommercialPlumbingNairobiRoute
   ContactRoute: typeof ContactRoute
+  DrainageServicesNairobiRoute: typeof DrainageServicesNairobiRoute
   EmergencyPlumbingNairobiRoute: typeof EmergencyPlumbingNairobiRoute
   GetAQuoteRoute: typeof GetAQuoteRoute
+  LeakRepairNairobiRoute: typeof LeakRepairNairobiRoute
+  PipeInstallationNairobiRoute: typeof PipeInstallationNairobiRoute
   PlumberNairobiRoute: typeof PlumberNairobiRoute
+  WaterHeaterInstallationRepairRoute: typeof WaterHeaterInstallationRepairRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/water-heater-installation-repair': {
+      id: '/water-heater-installation-repair'
+      path: '/water-heater-installation-repair'
+      fullPath: '/water-heater-installation-repair'
+      preLoaderRoute: typeof WaterHeaterInstallationRepairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/plumber-nairobi': {
       id: '/plumber-nairobi'
       path: '/plumber-nairobi'
       fullPath: '/plumber-nairobi'
       preLoaderRoute: typeof PlumberNairobiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pipe-installation-nairobi': {
+      id: '/pipe-installation-nairobi'
+      path: '/pipe-installation-nairobi'
+      fullPath: '/pipe-installation-nairobi'
+      preLoaderRoute: typeof PipeInstallationNairobiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leak-repair-nairobi': {
+      id: '/leak-repair-nairobi'
+      path: '/leak-repair-nairobi'
+      fullPath: '/leak-repair-nairobi'
+      preLoaderRoute: typeof LeakRepairNairobiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/get-a-quote': {
@@ -132,11 +233,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EmergencyPlumbingNairobiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/drainage-services-nairobi': {
+      id: '/drainage-services-nairobi'
+      path: '/drainage-services-nairobi'
+      fullPath: '/drainage-services-nairobi'
+      preLoaderRoute: typeof DrainageServicesNairobiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/commercial-plumbing-nairobi': {
+      id: '/commercial-plumbing-nairobi'
+      path: '/commercial-plumbing-nairobi'
+      fullPath: '/commercial-plumbing-nairobi'
+      preLoaderRoute: typeof CommercialPlumbingNairobiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bathroom-kitchen-plumbing': {
+      id: '/bathroom-kitchen-plumbing'
+      path: '/bathroom-kitchen-plumbing'
+      fullPath: '/bathroom-kitchen-plumbing'
+      preLoaderRoute: typeof BathroomKitchenPlumbingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -159,10 +281,16 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BathroomKitchenPlumbingRoute: BathroomKitchenPlumbingRoute,
+  CommercialPlumbingNairobiRoute: CommercialPlumbingNairobiRoute,
   ContactRoute: ContactRoute,
+  DrainageServicesNairobiRoute: DrainageServicesNairobiRoute,
   EmergencyPlumbingNairobiRoute: EmergencyPlumbingNairobiRoute,
   GetAQuoteRoute: GetAQuoteRoute,
+  LeakRepairNairobiRoute: LeakRepairNairobiRoute,
+  PipeInstallationNairobiRoute: PipeInstallationNairobiRoute,
   PlumberNairobiRoute: PlumberNairobiRoute,
+  WaterHeaterInstallationRepairRoute: WaterHeaterInstallationRepairRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
