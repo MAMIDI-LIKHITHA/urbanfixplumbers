@@ -85,6 +85,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Urban Fix Plumbers" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Urban Fix Plumbers | 24-Hour Plumber in Nairobi, Kenya" },
+      { property: "og:title", content: "Urban Fix Plumbers | 24-Hour Plumber in Nairobi, Kenya" },
+      { name: "twitter:title", content: "Urban Fix Plumbers | 24-Hour Plumber in Nairobi, Kenya" },
+      { name: "description", content: "24-hour plumbing services in Nairobi. Leak repair, drainage, pipe installation, water heaters and emergency plumbers across Westlands, Kilimani, Karen and beyond." },
+      { property: "og:description", content: "24-hour plumbing services in Nairobi. Leak repair, drainage, pipe installation, water heaters and emergency plumbers across Westlands, Kilimani, Karen and beyond." },
+      { name: "twitter:description", content: "24-hour plumbing services in Nairobi. Leak repair, drainage, pipe installation, water heaters and emergency plumbers across Westlands, Kilimani, Karen and beyond." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2ffea118-b982-4bd2-bdbe-53e100cd8bc0/id-preview-8ba58d6e--ae71ee6e-91ff-4233-8c5b-859f322e0069.lovable.app-1785322964553.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2ffea118-b982-4bd2-bdbe-53e100cd8bc0/id-preview-8ba58d6e--ae71ee6e-91ff-4233-8c5b-859f322e0069.lovable.app-1785322964553.png" },
     ],
     links: [
       {
