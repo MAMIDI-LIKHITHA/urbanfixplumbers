@@ -1,24 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/hero";
+import { ServicesGrid } from "@/components/services-grid";
+import { WhyChoose } from "@/components/why-choose";
+import { WhatsAppPanel } from "@/components/whatsapp-panel";
+import { Reviews } from "@/components/reviews";
+import { Gallery } from "@/components/gallery";
+import { AreasStrip } from "@/components/areas-strip";
+import { CtaBand } from "@/components/cta-band";
+import { localBusinessJsonLd } from "@/components/schema";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Urban Fix Plumbers | 24-Hour Plumber in Nairobi, Kenya" },
+      { name: "description", content: "24-hour plumbing services in Nairobi. Leak repair, drainage, pipe installation, water heaters and emergency plumbers across Westlands, Kilimani, Karen and beyond." },
+      { property: "og:title", content: "Urban Fix Plumbers | 24-Hour Plumber in Nairobi" },
+      { property: "og:description", content: "Fast, reliable plumbing repairs and installations across Nairobi — day or night." },
+      { property: "og:url", content: "/" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(localBusinessJsonLd()) }],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <>
+      <Hero
+        title="Trusted 24-Hour Plumbing"
+        highlight="across Nairobi."
+        subtitle="Fast, reliable plumbing repairs and installations, day or night, from a team Nairobi actually calls back."
       />
-    </div>
+      <ServicesGrid />
+      <WhyChoose />
+      <WhatsAppPanel />
+      <Gallery />
+      <Reviews />
+      <AreasStrip />
+      <CtaBand />
+    </>
   );
 }
