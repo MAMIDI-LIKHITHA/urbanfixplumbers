@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Logo } from "./logo";
+import { Logo } from "@/assets/urbanfix-logo.png";
 import { SITE, telLink } from "@/lib/site";
 
 const NAV = [
