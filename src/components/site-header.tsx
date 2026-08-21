@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Logo } from "@/assets/urbanfix-logo.png";
+import logo from "@/assets/urbanfix-logo.png";
 import { SITE, telLink } from "@/lib/site";
 
 const NAV = [
@@ -31,8 +31,12 @@ export function SiteHeader() {
     >
       <div className="container-tight flex h-16 items-center justify-between md:h-20">
         <Link to="/" className="shrink-0" aria-label={SITE.name}>
-          <Logo />
-        </Link>
+             <img
+                 src={logo}
+                 alt={SITE.name}
+                 className="h-10 w-auto md:h-12"
+             />
+         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {NAV.map((n) => (
             <Link
